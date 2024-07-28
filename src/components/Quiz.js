@@ -12,7 +12,7 @@ const Quiz = () => {
     const [newGame, setNewGame] = useState(false)
 
     useEffect(() => {
-        fetch('https://opentdb.com/api.php?amount=5&category=21&difficulty=medium&type=multiple')
+        fetch('https://opentdb.com/api.php?amount=5&category=18&difficulty=medium')
             .then(res => res.json())
             .then(data => {
                 const appendedData = data.results.map(data => {
