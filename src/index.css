@@ -1,4 +1,4 @@
-/* Variables */
+/* VARIABLES */
 
 :root{
     --text-primary-color: #293264;
@@ -13,30 +13,31 @@
     --border-end-game: #4D5B9E; 
 }
 
-/* General settings */
+/* RESET */
 
-*, *::after, *::before {
+*, 
+*::after, 
+*::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
 }
 
-html,body{
+/* GENERAL */
+
+html,
+body {
     height: 100%;
 }
 
-.root{
+.root {
     height: 100%;
 }
 
-h1,h2,h3,p{
-    margin: 0;
-}
+/* MAIN */
 
-/* Main Div */
-
-.main{
+.main {
     min-height: 100%;
     position: relative;
     display: flex;
@@ -47,23 +48,23 @@ h1,h2,h3,p{
     overflow: hidden;
 }
 
-/* Home page */
+/* HOMEPAGE */
 
-.quiz-title{
+.quiz-title {
     font-family: 'Karla', sans-serif;
     font-size: calc((31 / 16) * 1rem);
     color: var(--text-primary-color);
     text-align: center;
 }
 
-.description{
+.description {
     font-size: 1rem;
     color: var(--text-primary-color);
     text-align: center;
     margin-top: 16px;
 }
 
-.start-quiz{
+.start-quiz {
     background-color: var(--button-bg-primary);
     color: var(--text-white);
     border: none;
@@ -72,12 +73,12 @@ h1,h2,h3,p{
     margin-top: 28px;
 }
 
-.start-quiz:focus{
+.start-quiz:focus {
     outline: none;
     transform: scale(1.2);
 }
 
-.first-blob{
+.first-blob {
     background-color: #DEEBF8;
     width: 150px;
     height: 150px;
@@ -88,7 +89,7 @@ h1,h2,h3,p{
     z-index: -1;
 }
 
-.second-blob{
+.second-blob {
     background-color: #FFFAD1;
     width: 150px;
     height: 240px;
@@ -100,51 +101,51 @@ h1,h2,h3,p{
     z-index: -1;
 }
 
-.first-little-blob{
+.first-little-blob {
     bottom: -95px;
     left: -90px;
 }
 
-.second-little-blob{
+.second-little-blob {
     top: -100px;
     right: -95px;
 }
 
-/* Questions */
+/* QUESTIONS */
 
-.question{
+.question {
     width: 400px;
     border-bottom: 1px solid var(--question-border);
 }
 
-.question:not(:first-child){
+.question:not(:first-child) {
     margin-top: 16px;
 }
 
-.question-title{
+.question-title {
     font-family: 'Karla', sans-serif;
     font-size: 1rem;
     color: var(--text-primary-color);
     font-weight: 700;
 }
 
-.answers{
+.answers {
     display: flex;
     margin: 12px 0px 16px 0px;
     gap: 13px;
 }
 
-/* Bottom section */
+/* BOTTOM SECTION */
 
-.bottom-section{
+.bottom-section {
     display: flex;
     align-items: baseline;
     justify-content: flex-start;
 }
 
-/* Check button */
+/* CHECK BUTTON */
 
-.button{
+.button {
     margin-top: 20px;
     border-radius: 10px;
     border: none;
@@ -152,36 +153,36 @@ h1,h2,h3,p{
     background-color: var(--button-bg-primary);
 }
 
-.check-answers{
+.check-answers {
     padding: 12px 22px;
 }
 
-.play-again{
+.play-again {
     padding: 8px 14px;
     margin-left: auto;
 }
 
-.play-again:first-of-type{
+.play-again:first-of-type {
     margin-right: 8px;
 }
 
-.check-answers:focus, .play-again:focus{
+.check-answers:focus, .play-again:focus {
     outline: none;
     transform: scale(1.2);
 }
 
-/* Correct answers */
+/* CORRECT ANSWERS */
 
-.result{
+.result {
     font-size: calc((13 / 16) * 1rem);
     font-weight: 700;
     color: var(--text-primary-color);
     margin-right: 16px;
 }
 
-/* Answer "button" */
+/* ANSWER BUTTON */
 
-.radio-label{
+.radio-label {
     font-size: calc((10/16)*1rem);
     padding: 4px 16px;
     border-radius: 8px;
@@ -195,23 +196,23 @@ h1,h2,h3,p{
     font-weight: 600;
 }
 
-.radio{
+.radio {
     display: none;
 }
 
-/* States for answers */
+/* ANSWER STATES */
 
-.selected-answer{
+.selected- {
     background-color: var(--answer);
     border: none;
 }
 
-.correct-answer{
+.correct-answer {
     background-color: var(--corect-answer);
     border: none;
 }
 
-.incorrect-answer{
+.incorrect-answer {
     background-color: var(--incorect-answer);
     border: none;
     opacity: 0.5;
@@ -219,7 +220,7 @@ h1,h2,h3,p{
 
 /* Change opacity of answers that are not correct/incorrect after checking answers */
 
-.after-check{
+.after-check {
     background-color: transparent;
     border: 1px solid var(--question-border);
     opacity: 0.5;
